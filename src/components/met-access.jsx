@@ -69,7 +69,7 @@ class MetAccess extends React.Component {
 
   componentDidMount() {
     this.randomLetter();
-    this.getArrayID();   
+    this.getArrayID();
   }
 
   getArt() {
@@ -89,18 +89,22 @@ class MetAccess extends React.Component {
   render() {
     return (
       <div className="tableau">
-        <button onClick={this.getArt}>salut</button>
-        <h1>{this.state.art.objectName}</h1>
-        <p>{this.state.art.creditLine}</p>
+        <button id="button1" onClick={this.getArt}>
+          TABLEAU
+        </button>
+        <h1 id="title-tableau">{this.state.art.objectName}</h1>
+        <p id="credit-tableau">{this.state.art.creditLine}</p>
         <div className="chevalet-tableau">
           <div className="chevalet">
-            <img src="{chevalet}" alt="chevalet"></img>
+            <img src={chevalet} alt="chevalet"></img>
           </div>
-          <img
-            className="image-tableau"
-            src={this.state.art.primaryImage}
-            alt={this.state.art.objectName}
-          />
+          <div className="perspective">
+            <img
+              className="image-tableau"
+              src={this.state.art.primaryImage}
+              alt={this.state.art.objectName}
+            ></img>
+          </div>
         </div>
       </div>
     );

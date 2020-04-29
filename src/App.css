@@ -5,7 +5,8 @@
 
 .background {
   position: absolute;
-  background-image: url("./background.png");
+  background-image: url("./background_6.gif");
+  background-size: cover;
   width: 100%;
   height: 100vh;
   z-index: -1000;
@@ -45,7 +46,22 @@ WebcamAccess {
   height: 90vh;
   width: 40%;
   z-index: 2;
-  
+}
+
+#title-tableau,
+#credit-tableau {
+  position: fixed;
+  left: 0;
+  height: 15vh;
+  left: 2vw;
+}
+
+#title-tableau {
+  bottom: 18vh;
+}
+
+#credit-tableau {
+  bottom: 14vh;
 }
 
 .chevalet-tableau {
@@ -56,8 +72,50 @@ WebcamAccess {
   perspective: 1000px;
 }
 
+.chevalet {
+  position: absolute;
+  bottom: 0;
+  right: 30vh;
+  transform: translateY(15vh);
+  height: 100%;
+}
+
+.chevalet img {
+  height: 100%;
+}
+
 .image-tableau {
   position: absolute;
-  width: 22vh;
-  transform: rotate3d(0, 1, 0, 160deg);
+  z-index: 3000;
+  bottom: 18vh;
+  right: 15vw;
+  width: 40%;
+  transform: rotate3d(-0.03, 1, 0.1, 148deg);
+}
+
+button {
+  z-index: 1000000000;
+  position: fixed;
+  top: 90vh;
+  padding: 15px;
+  background: none;
+  font-size: 13px;
+  color: white;
+  border: 0.5px solid white;
+}
+
+#button1 {
+  right: 45vw;
+}
+
+#button2 {
+  right: 55vw;
+}
+
+#button1:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#button2:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }

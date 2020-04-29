@@ -54,7 +54,9 @@ class WebcamAccess extends React.Component {
   render() {
     return (
       <>
-        <button onClick={this.handleGetWebcam}>Clic</button>
+        <button id="button2" onClick={this.handleGetWebcam}>
+          TÉLÉPORTATION
+        </button>
         <div className="back-video">
           <iframe src={this.state.playerSource}></iframe>
         </div>
