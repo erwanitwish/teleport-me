@@ -90,17 +90,17 @@ class MetAccess extends React.Component {
     return (
       <div className="tableau">
         <button onClick={this.getArt}>salut</button>
-        <h1>{this.state.art.objectName}</h1>
-        <p>{this.state.art.creditLine}</p>
+        <h1 id='title-tableau'>{this.state.art.objectName}</h1>
+        <p id='credit-tableau'>{this.state.art.creditLine}</p>
         <div className="chevalet-tableau">
-          <div className="chevalet">
-            <img src="{chevalet}" alt="chevalet"></img>
-          </div>
           <img
             className="image-tableau"
             src={this.state.art.primaryImage}
             alt={this.state.art.objectName}
           />
+          <div className="chevalet">
+            <img src={chevalet} alt="chevalet"></img>
+          </div>
         </div>
       </div>
     );

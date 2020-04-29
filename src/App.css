@@ -48,6 +48,12 @@ WebcamAccess {
   
 }
 
+#title-tableau, #credit-tableau {
+  position: fixed;
+  left: 0;
+  height: 15vh;
+}
+
 .chevalet-tableau {
   position: fixed;
   right: 0;
@@ -56,8 +62,23 @@ WebcamAccess {
   perspective: 1000px;
 }
 
+.chevalet {
+  position: absolute;
+  bottom: 0;
+  right: 30vh;
+  transform: translateY(15vh);
+  height: 70%;
+}
+
+.chevalet img {
+  height: 100%;
+}
+
 .image-tableau {
   position: absolute;
-  width: 22vh;
-  transform: rotate3d(0, 1, 0, 160deg);
+  z-index: 3000;
+  bottom: 10vh;
+  right: 14vw;
+  width: 40%;
+  transform: rotate3d(-0.02, 1, 0.1, 144deg);
 }
