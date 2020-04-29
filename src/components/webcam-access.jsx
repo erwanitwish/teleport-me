@@ -58,6 +58,7 @@ class WebcamAccess extends React.Component {
       <>
         <Spring
           config={config.slow}
+          delay={1000}
           from={{ opacity: 0, transform: 'translateX(-10vw)' }}
           to={{ opacity: 1, transform: 'translateX(0vw)' }}>
           {props => <Button stylize={props} idButton='button2' func={this.handleGetWebcam} butnTxt='TÉLÉPORTATION' move='left' />}
