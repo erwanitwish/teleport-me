@@ -69,8 +69,7 @@ class MetAccess extends React.Component {
 
   componentDidMount() {
     this.randomLetter();
-    this.getArrayID();
-    this.getArt();
+    this.getArrayID();   
   }
 
   getArt() {
@@ -97,13 +96,11 @@ class MetAccess extends React.Component {
           <div className="chevalet">
             <img src="{chevalet}" alt="chevalet"></img>
           </div>
-          <div className="perspective">
-            <img
-              className="image-tableau"
-              src={this.state.art.primaryImage}
-              alt={this.state.art.objectName}
-            ></img>
-          </div>
+          <img
+            className="image-tableau"
+            src={this.state.art.primaryImage}
+            alt={this.state.art.objectName}
+          />
         </div>
       </div>
     );

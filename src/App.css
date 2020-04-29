@@ -38,27 +38,26 @@ WebcamAccess {
 }
 
 .tableau {
+  color: white;
   position: fixed;
-  height: 100%;
+  position: absolute;
+  right: 0;
+  height: 90vh;
+  width: 40%;
   z-index: 2;
+  
+}
+
+.chevalet-tableau {
+  position: fixed;
+  right: 0;
+  width: 50%;
+  height: 100%;
   perspective: 1000px;
 }
 
-.perspective {
+.image-tableau {
   position: absolute;
   width: 22vh;
-  top: 33.5vw;
-  left: 67vw;
-  transform: rotate3d(0, 1, 0, 116deg);
-}
-
-.chevalet {
-  height: 90vh;
-}
-
-.image-tableau {
-  width: 100%;
-  /* transform-style: preserve-3d; */
-  /* perspective-origin: -150% -150%; */
-  /* transform: rotate3d(0, 1, 0, 45deg); */
+  transform: rotate3d(0, 1, 0, 160deg);
 }
