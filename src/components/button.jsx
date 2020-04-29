@@ -1,9 +1,9 @@
 import React from "react";
 
-function Button({idButton, func, butnTxt }) {
+function Button({idButton, func, butnTxt, stylize }) {
   return (
     <>
-      <button id={idButton} onClick={func}>{butnTxt}</button>
+      <button style={stylize} id={idButton} onClick={func}>{butnTxt}</button>
     </>
   );
 }

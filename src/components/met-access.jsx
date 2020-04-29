@@ -1,7 +1,9 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { Spring, config } from "react-spring/renderprops";
 import chevalet from "../chevalet.png";
-import Button from './button';
+import Button from "./button";
 
 class MetAccess extends React.Component {
   constructor(props) {
@@ -90,7 +92,25 @@ class MetAccess extends React.Component {
   render() {
     return (
       <div className="tableau">
-        <Button idButton='button1' func={this.getArt} butnTxt='TABLEAU' />
+        <Link to="/credits">
+          <button id="credits-button">crédits</button>
+        </Link>
+        <Spring
+          config={config.slow}
+          delay={1000}
+          from={{ opacity: 0, transform: "translateX(10vw)" }}
+          to={{ opacity: 1, transform: "translateX(0vw)" }}
+        >
+          {(props) => (
+            <Button
+              stylize={props}
+              idButton="button1"
+              func={this.getArt}
+              butnTxt="TABLEAU"
+            />
+          )}
+        </Spring>
+
         <h1 id="title-tableau">{this.state.art.objectName}</h1>
         <p id="credit-tableau">{this.state.art.creditLine}</p>
         <div className="chevalet-tableau">

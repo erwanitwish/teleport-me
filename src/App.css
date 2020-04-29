@@ -119,3 +119,30 @@ button {
 #button2:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.credits {
+  position: absolute;
+  background-image: url("./credits.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+.text-credits {
+  position: fixed;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#credits-button {
+  top: 3vh;
+  right: 4vh;
+  color: grey;
+  border: none;
+}
+
+#retour-button {
+  top: 3vh;
+  right: 4vh;
+}
