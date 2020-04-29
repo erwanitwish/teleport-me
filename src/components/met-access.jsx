@@ -69,6 +69,7 @@ class MetAccess extends React.Component {
   componentDidMount() {
     this.randomLetter();
     this.getArrayID();
+    this.getArt();
   }
 
   getArt() {
@@ -80,7 +81,6 @@ class MetAccess extends React.Component {
         `https://collectionapi.metmuseum.org/public/collection/v1/objects/${finalId}`
       )
       .then((res) => {
-        this.setState({ loading: false });
         this.setState({ art: res.data });
       });
     this.getArrayID();
@@ -90,9 +90,6 @@ class MetAccess extends React.Component {
     return (
       <>
         <button onClick={this.getArt}>salut</button>
-        <div>
-          <p>{this.state.loading && "...loading"}</p>
-        </div>
         <h1>{this.state.art.objectName}</h1>
         <p>{this.state.art.creditLine}</p>
         <img

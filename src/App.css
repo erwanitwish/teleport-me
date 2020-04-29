@@ -1,38 +1,40 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background {
+  position: absolute;
+  float: left;
+  background-image: url("./background.png");
+  width: 1920px;
+  height: 1028px;
+  z-index: -1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.behind {
+  position: fixed;
+  /* z-index: -500000; */
+  height: 90vh;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.behind iframe {
+  height: 90vh;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+WebcamAccess {
+  position: fixed;
+  background: none;
+  background-color: none;
+  z-index: -20000;
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+MetAccess {
+  position: absolute;
+  background: none;
+  background-color: none;
+  z-index: 2;
 }
