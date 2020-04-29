@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Button from './button';
 
 class WebcamAccess extends React.Component {
   constructor(props) {
@@ -54,9 +55,7 @@ class WebcamAccess extends React.Component {
   render() {
     return (
       <>
-        <button id="button2" onClick={this.handleGetWebcam}>
-          TÉLÉPORTATION
-        </button>
+        <Button idButton='button2' func={this.handleGetWebcam} butnTxt='TÉLÉPORTATION' move='left' />
         <div className="back-video">
           <iframe src={this.state.playerSource}></iframe>
         </div>
