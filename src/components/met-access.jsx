@@ -5,13 +5,15 @@ class MetAccess extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      artId: "",
       art: "",
       loading: true,
     };
     this.getArt = this.getArt.bind(this);
+    this.getID = this.getID.bind(this);
   }
 
-  getArt() {
+  getID() {
     const randomNumber = Math.floor(Math.random() * 50000) + 1;
     console.log(randomNumber);
     axios
@@ -20,19 +22,37 @@ class MetAccess extends React.Component {
       )
       .then((res) => {
         if (res.data.isHighlight === true) {
-          this.setState({ loading: false });
-          this.setState({ art: res.data });
+          this.setState({ artId: res.data.objectID });
           console.log(res.data);
         } else {
-          this.getArt();
+          this.getID();
         }
       })
-      .catch((err) => this.getArt());
+      .catch((err) => this.getID());
+  }
+
+  componentDidMount() {
+    this.getID();
+  }
+
+  componentDidUpdate() {
+    this.getID();
+  }
+
+  getArt() {
+    axios
+      .get(
+        `https://collectionapi.metmuseum.org/public/collection/v1/objects/${this.state.artId}`
+      )
+      .then((res) => {
+        this.setState({ loading: false });
+        this.setState({ art: res.data });
+      });
   }
 
   render() {
     return (
-      <div>
+      <>
         <button onClick={this.getArt}>salut</button>
         <div>
           <p>{this.state.loading && "...loading"}</p>
@@ -43,7 +63,7 @@ class MetAccess extends React.Component {
           src={this.state.art.primaryImage}
           alt={this.state.art.objectName}
         ></img>
-      </div>
+      </>
     );
   }
 }
