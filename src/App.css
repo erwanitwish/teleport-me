@@ -53,6 +53,15 @@ WebcamAccess {
   position: fixed;
   left: 0;
   height: 15vh;
+  left: 2vw;
+}
+
+#title-tableau {
+  bottom: 18vh;
+}
+
+#credit-tableau {
+  bottom: 14vh;
 }
 
 .chevalet-tableau {
@@ -82,4 +91,23 @@ WebcamAccess {
   right: 15vw;
   width: 40%;
   transform: rotate3d(-0.03, 1, 0.1, 148deg);
+}
+
+button {
+  z-index: 1000000000;
+  position: fixed;
+  top: 90vh;
+  padding: 15px;
+  background: none;
+  font-size: 13px;
+  color: white;
+  border: 0.5px solid white;
+}
+
+#button1 {
+  right: 45vw;
+}
+
+#button2 {
+  right: 55vw;
 }
