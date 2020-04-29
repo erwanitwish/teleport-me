@@ -5,23 +5,28 @@
 
 .background {
   position: absolute;
-  float: left;
   background-image: url("./background.png");
-  width: 1920px;
-  height: 1028px;
+  width: 100%;
+  height: 100vh;
   z-index: -1000;
+  clip-path: polygon(100% 100%, 100% 0, 0 0, 0 95%, 10% 100%, 5% 100%);
 }
 
 .behind {
-  position: fixed;
-  /* z-index: -500000; */
-  height: 90vh;
+  height: 95vh;
   width: 100%;
 }
 
 .behind iframe {
+  height: 98vh;
+  width: 100%;
+}
+
+.back-video {
+  position: fixed;
   height: 90vh;
   width: 100%;
+  z-index: -5000000;
 }
 
 WebcamAccess {
@@ -32,9 +37,8 @@ WebcamAccess {
   height: 100vh;
 }
 
-MetAccess {
-  position: absolute;
-  background: none;
-  background-color: none;
+.tableau {
+  position: fixed;
+  height: 10%;
   z-index: 2;
 }

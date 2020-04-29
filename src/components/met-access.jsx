@@ -88,7 +88,7 @@ class MetAccess extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="tableau">
         <button onClick={this.getArt}>salut</button>
         <h1>{this.state.art.objectName}</h1>
         <p>{this.state.art.creditLine}</p>
@@ -96,7 +96,7 @@ class MetAccess extends React.Component {
           src={this.state.art.primaryImage}
           alt={this.state.art.objectName}
         ></img>
-      </>
+      </div>
     );
   }
 }

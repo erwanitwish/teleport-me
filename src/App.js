@@ -6,11 +6,13 @@ import WebcamAccess from "./components/webcam-access";
 function App() {
   return (
     <div className="App">
-      <div className="background"></div>
+      <div className="background">
+        <MetAccess />
+      </div>
+
       <div className="behind">
         <WebcamAccess />
       </div>
-      <MetAccess />
     </div>
   );
 }
