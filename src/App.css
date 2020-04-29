@@ -41,4 +41,20 @@ WebcamAccess {
   position: fixed;
   height: 10%;
   z-index: 2;
+  perspective: 600px;
+}
+
+.perspective {
+  position: absolute;
+  width: 25vh;
+  left: 65vw;
+  transform-origin: -20% -20%;
+  transform: rotate3d(0, 1, 0, 60deg);
+}
+
+.image-tableau {
+  width: 100%;
+  /* transform-style: preserve-3d; */
+  /* perspective-origin: -150% -150%; */
+  /* transform: rotate3d(0, 1, 0, 45deg); */
 }
