@@ -52,6 +52,10 @@ WebcamAccess {
   transform: rotate3d(0, 1, 0, 116deg);
 }
 
+.chevalet {
+  height: 90vh;
+}
+
 .image-tableau {
   width: 100%;
   /* transform-style: preserve-3d; */

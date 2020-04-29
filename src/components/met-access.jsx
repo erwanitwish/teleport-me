@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import chevalet from "../chevalet.png";
 
 class MetAccess extends React.Component {
   constructor(props) {
@@ -92,12 +93,17 @@ class MetAccess extends React.Component {
         <button onClick={this.getArt}>salut</button>
         <h1>{this.state.art.objectName}</h1>
         <p>{this.state.art.creditLine}</p>
-        <div className="perspective">
-          <img
-            className="image-tableau"
-            src={this.state.art.primaryImage}
-            alt={this.state.art.objectName}
-          ></img>
+        <div className="chevalet-tableau">
+          <div className="chevalet">
+            <img src="{chevalet}" alt="chevalet"></img>
+          </div>
+          <div className="perspective">
+            <img
+              className="image-tableau"
+              src={this.state.art.primaryImage}
+              alt={this.state.art.objectName}
+            ></img>
+          </div>
         </div>
       </div>
     );
