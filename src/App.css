@@ -67,7 +67,7 @@ WebcamAccess {
   bottom: 0;
   right: 30vh;
   transform: translateY(15vh);
-  height: 70%;
+  height: 100%;
 }
 
 .chevalet img {
@@ -77,8 +77,8 @@ WebcamAccess {
 .image-tableau {
   position: absolute;
   z-index: 3000;
-  bottom: 10vh;
-  right: 14vw;
+  bottom: 18vh;
+  right: 16vw;
   width: 40%;
-  transform: rotate3d(-0.02, 1, 0.1, 144deg);
+  transform: rotate3d(-0.03, 1, 0.1, 144deg);
 }
