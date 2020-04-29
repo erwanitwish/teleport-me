@@ -5,7 +5,7 @@ import WebcamAccess from './components/webcam-access';
 function App() {
   return (
     <div className="App">
-      
+      <WebcamAccess />
     </div>
   );
 }
