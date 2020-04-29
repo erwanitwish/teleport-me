@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Spring, config } from 'react-spring/renderprops';
 import Button from './button';
 
 class WebcamAccess extends React.Component {
@@ -55,7 +56,12 @@ class WebcamAccess extends React.Component {
   render() {
     return (
       <>
-        <Button idButton='button2' func={this.handleGetWebcam} butnTxt='TÉLÉPORTATION' move='left' />
+        <Spring
+          config={config.slow}
+          from={{ opacity: 0, transform: 'translateX(-10vw)' }}
+          to={{ opacity: 1, transform: 'translateX(0vw)' }}>
+          {props => <Button stylize={props} idButton='button2' func={this.handleGetWebcam} butnTxt='TÉLÉPORTATION' move='left' />}
+        </Spring>
         <div className="back-video">
           <iframe src={this.state.playerSource}></iframe>
         </div>
