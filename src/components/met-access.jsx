@@ -12,7 +12,7 @@ class MetAccess extends React.Component {
   }
 
   getArt() {
-    const randomNumber = Math.floor(Math.random() * 20000) + 1;
+    const randomNumber = Math.floor(Math.random() * 50000) + 1;
     console.log(randomNumber);
     axios
       .get(
@@ -20,6 +20,7 @@ class MetAccess extends React.Component {
       )
       .then((res) => {
         if (res.data.isHighlight === true) {
+          this.setState({ loading: false });
           this.setState({ art: res.data });
           console.log(res.data);
         } else {
@@ -33,6 +34,9 @@ class MetAccess extends React.Component {
     return (
       <div>
         <button onClick={this.getArt}>salut</button>
+        <div>
+          <p>{this.state.loading && "...loading"}</p>
+        </div>
         <h1>{this.state.art.objectName}</h1>
         <p>{this.state.art.creditLine}</p>
         <img
