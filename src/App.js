@@ -26,25 +26,25 @@ class App extends React.Component {
       <Router>
         <switch>
           <div className="App">
-            {
-              <Spring
-                config={config.slow}
-                delay={1000}
-                from={{ opacity: 0, transform: "translateX(-10vw)" }}
-                to={{ opacity: 1, transform: "translateX(0vw)" }}
-              >
-                {(props) => (
-                  <Button
-                    stylize={props}
-                    idButton="button2"
-                    func={this.reloading}
-                    butnTxt="TÉLÉPORTATION"
-                    move="left"
-                  />
-                )}
-              </Spring>
-            }
             <Route exact path="/">
+              {
+                <Spring
+                  config={config.slow}
+                  delay={1000}
+                  from={{ opacity: 0, transform: "translateX(-10vw)" }}
+                  to={{ opacity: 1, transform: "translateX(0vw)" }}
+                >
+                  {(props) => (
+                    <Button
+                      stylize={props}
+                      idButton="button2"
+                      func={this.reloading}
+                      butnTxt="TÉLÉPORTATION"
+                      move="left"
+                    />
+                  )}
+                </Spring>
+              }
               <MetAccess />
               <div className="background"></div>
               <div className="behind">
