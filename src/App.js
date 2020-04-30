@@ -17,7 +17,7 @@ class App extends React.Component {
     this.reloading = this.reloading.bind(this);
   }
 
-  reloading() {
+  reloading () {
     this.setState({ reload: !this.state.reload });
   }
 
@@ -48,7 +48,7 @@ class App extends React.Component {
               <MetAccess />
               <div className="background"></div>
               <div className="behind">
-                {this.state.reload && <YoutubeAccess />}
+                {this.state.reload ? <YoutubeAccess /> : this.reloading()}
               </div>
             </Route>
             <Route exact path="/credits">
